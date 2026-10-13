@@ -1,0 +1,236 @@
+
+.house3d {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d8dee8;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #172033;
+}
+
+.house3d-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.house3d-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.house3d-header p {
+  margin: 5px 0 0;
+  color: #687386;
+  font-size: 13px;
+}
+
+.house3d-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+
+.house3d-toolbar button,
+.house3d-label-toggle {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 9px 13px;
+  background: #f5f7fa;
+  color: #233047;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.house3d-toolbar button:hover,
+.house3d-label-toggle:hover {
+  background: #e7edf5;
+}
+
+.house3d-toolbar button.active {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: white;
+}
+
+.house3d-label-toggle {
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.house3d-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 12px 16px;
+  border-top: 1px solid #e5eaf0;
+  border-bottom: 1px solid #e5eaf0;
+  font-size: 12px;
+  color: #344054;
+}
+
+.house3d-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.house3d-legend i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+}
+
+.legend-gate {
+  background: #20c878;
+}
+
+.legend-door {
+  background: #ff9f0a;
+}
+
+.legend-window {
+  background: #35bdf2;
+}
+
+.legend-wall {
+  background: #c8ccc8;
+}
+
+.house3d-canvas {
+  width: 100%;
+  height: 540px;
+  min-height: 360px;
+  background: #e9edf0;
+}
+
+.house3d-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.house3d-note {
+  margin: 0;
+  padding: 12px 16px;
+  border-top: 1px solid #e5eaf0;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.house3d-empty {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 20px;
+  text-align: center;
+  color: #667085;
+}
+
+@media (max-width: 600px) {
+  .house3d-header {
+    align-items: flex-start;
+  }
+
+  .house3d-header h3 {
+    font-size: 16px;
+  }
+
+  .house3d-toolbar button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .house3d-canvas {
+    height: 420px;
+  }
+
+  .house3d-legend {
+    gap: 10px;
+  }
+}
+
+.house3d-theme-picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5eaf0;
+  background: #f8fafc;
+}
+
+.house3d-theme-picker label {
+  color: #344054;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.house3d-theme-picker select {
+  max-width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+}
+
+.house3d-details {
+  padding: 16px;
+  border-top: 1px solid #dbe2ea;
+  background: #f8fafc;
+}
+
+.house3d-details h4 {
+  margin: 0 0 12px;
+  color: #172033;
+}
+
+.house3d-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.house3d-counts span {
+  padding: 10px 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: white;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.house3d-room-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475467;
+  font-size: 13px;
+}
+
+.house3d-room-detail strong {
+  color: #172033;
+}
+
+@media (min-width: 650px) {
+  .house3d-room-detail {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
